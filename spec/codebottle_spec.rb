@@ -27,4 +27,25 @@ describe Codebottle do
       expect { Codebottle.verifysecure(secure_token: "invalid") }.to raise_error(Codebottle::CodebottleError, "Invalid token")
     end
   end
+
+  describe "#getprofile" do
+    it "returns information on username 'IndigoTiger'" do
+      result = Codebottle.getprofile(username: "IndigoTiger")
+      expect(result.profile["username"]).to eq("IndigoTiger")
+    end
+  end
+
+  describe "#getcodelanguages" do
+    it "returns a Hash mapping language IDs to names" do
+      result = Codebottle.getcodelanguages()
+      expect(result.code_language_names).to be_a(Hash)
+    end
+  end
+
+  describe "#getcodetypes" do
+    it "returns a Hash mapping type IDs to names" do
+      result = Codebottle.getcodetypes()
+      expect(result.code_type_names).to be_a(Hash)
+    end
+  end
 end
