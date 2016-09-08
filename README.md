@@ -1,4 +1,4 @@
-# Codebottle
+# Codebottle [![Build Status](https://travis-ci.org/codebottle-io/codebottle-ruby.svg?branch=master)](https://travis-ci.org/codebottle-io/codebottle-ruby)
 
 A Ruby library to interact with CodeBottle's API
 
